@@ -1,0 +1,17 @@
+<section id="faq" class="section faq">
+  <h2>Perguntas Frequentes sobre Planos Empresariais (PME/MEI)</h2>
+
+  <div class="faq-list" role="list">
+    <div class="faq-item" *ngFor="let it of items; let i = index" role="listitem" [class.open]="openStates[i]">
+      <button class="faq-header" [attr.aria-expanded]="openStates[i]" (click)="toggle(i)">
+        <span class="faq-title">{{ it.header }}</span>
+        <span class="chev" aria-hidden="true">▾</span>
+      </button>
+
+      <div #panel class="faq-panel" [style.maxHeight]="panelHeights[i]">
+        <div class="faq-panel-inner">{{ it.content }}</div>
+      </div>
+    </div>
+  </div>
+
+</section>

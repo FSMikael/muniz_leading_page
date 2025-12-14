@@ -1,0 +1,276 @@
+.section {
+  padding: 32px 0;
+  /* slight spacing around sections */
+}
+
+.hero {
+  position: relative;
+  display: block;
+  color: #fff;
+  overflow: hidden;
+  background: #0B2A7A;
+  min-height: 480px;
+  /* compact desktop height */
+}
+
+.hero__image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right 20%;
+  display: block;
+  transform: none;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg,
+      rgba(0, 2, 107, 0.95) 0%,
+      rgba(5, 41, 133, 0.85) 40%,
+      rgba(88, 102, 134, 0.4) 50%, transparent 85%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero__content {
+  position: absolute;
+  /* participa do stacking da seção */
+  left: 400px;
+  /* texto à esquerda, compacto */
+  top: 50%;
+  /* posiciona verticalmente */
+  transform: translateY(-50%);
+  max-width: 420px;
+  /* largura do bloco de texto menor */
+  padding: 0;
+  /* sem padding interno extra */
+  z-index: 2;
+  text-align: left;
+}
+
+.hero h1 {
+  font-size: clamp(28px, 3.2vw, 36px);
+  line-height: 1.12;
+  margin-bottom: 14px;
+  font-weight: 800;
+  text-shadow: 0 2px 14px rgba(2, 12, 40, 0.22);
+}
+
+.hero .sub {
+  font-size: 15px;
+  opacity: 0.92;
+  max-width: 520px;
+  line-height: 1.5;
+}
+
+.hero__badges {
+  display: flex;
+  gap: 16px;
+  margin-top: 12px;
+  opacity: 1;
+}
+
+/* wrapper that makes the button width match the badges width */
+.hero__cta-wrap {
+  display: inline-block;
+  /* shrink-to-fit */
+  text-align: left;
+}
+
+.hero__cta-wrap .btn-primary.btn-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  /* allow JS to set inline width to match badges */
+  max-width: none;
+  margin: 12px 0 0 0;
+  box-sizing: border-box;
+}
+
+.hero__cta-wrap .hero__badges {
+  display: inline-flex;
+  justify-content: flex-start;
+}
+
+.hero__badges .badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.hero__badges .badge svg {
+  color: #ffbb00;
+}
+
+.hero__actions {
+  margin-top: 12px;
+  text-align: left;
+}
+
+.btn-pill {
+  border-radius: 999px;
+  padding: 13px 32px;
+  background: #df9102;
+  color: #f7f7f7;
+  font-weight: 700;
+  font-size: 15px;
+  text-transform: none;
+}
+
+.hero__actions {
+  margin-top: 8px;
+  /* reduz a distância para subir o botão */
+  margin-left: 0;
+  text-align: left;
+  /* mantém alinhamento à esquerda */
+}
+
+.hero .btn-primary {
+  background: #ffa600;
+  /* amarelo */
+  color: #f7f7f7;
+  /* texto branco */
+  border: none;
+  text-decoration: none;
+}
+
+.hero .btn-primary.btn-pill {
+  border-radius: 999px;
+  padding: 12px 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  margin: 0;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1;
+}
+
+.hero .btn-primary:hover,
+.hero .btn-primary:focus {
+  filter: brightness(0.97);
+  text-decoration: none;
+  outline: none;
+}
+
+.hero__badges {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+  opacity: 1;
+  justify-content: flex-start;
+}
+
+.hero__scroll {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    min-height: 420px;
+  }
+
+  .hero__content {
+    left: 56px;
+    max-width: 400px;
+  }
+
+  .hero h1 {
+    font-size: clamp(26px, 3.4vw, 34px);
+  }
+}
+
+@media (max-width: 768px) {
+  .btn {
+    width: 100%;
+    min-height: 48px;
+  }
+
+  /* override global mobile .btn width for the hero CTA */
+  .hero .btn-primary.btn-pill {
+    width: 100%;
+    max-width: 92vw;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    /* reduced horizontal padding for better proportion */
+    box-sizing: border-box;
+    min-height: 48px;
+    text-align: center;
+  }
+
+  /* remove large extra padding on the wrapper so button keeps the intended width */
+  .hero__cta-wrap .btn-primary.btn-pill {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .hero {
+    min-height: 70svh;
+  }
+
+  .hero__content {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    max-width: 92vw;
+    width: 100%;
+    margin: 0 auto;
+    padding: 24px 16px 28px;
+    text-align: center;
+  }
+
+  .hero__image img {
+    transform: translateX(0);
+    object-position: center center;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  /* overlay mais suave no mobile para legibilidade e evitar excesso de azul */
+  .hero__overlay {
+    background: linear-gradient(90deg,
+        rgba(0, 2, 107, 0.88) 0%,
+        rgba(5, 41, 133, 0.70) 45%,
+        rgba(88, 102, 134, 0.28) 65%,
+        transparent 90%);
+  }
+}
+
+/* desktop-specific fine-tune: ensure head area visible */
+@media (min-width: 1030px) {
+  .hero__image img {
+    object-position: right 18%;
+    /* nudge image down slightly */
+  }
+}
+
+/* faixa intermediária: tablets grandes/laptops pequenos */
+@media (max-width: 900px) and (min-width: 769px) {
+  .hero__content {
+    left: 80px;
+    padding: 48px 28px;
+    max-width: 560px;
+  }
+}

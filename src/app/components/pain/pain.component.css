@@ -1,0 +1,100 @@
+.pain {
+  background: #ffffff;
+  color: var(--color-text);
+  padding-bottom: 56px; /* espaço entre os cards e a próxima seção (formulário) */
+}
+
+.pain h2 {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.grid3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+/* centraliza a grade e limita largura máxima para ficar semelhante à referência */
+.grid3 {
+  max-width: 1120px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+.card, .card1, .card2, .card3 {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 30px 24px; /* mais espaço interno como referência */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centraliza conteúdo dentro do card */
+  text-align: center;
+  justify-content: flex-start;
+  min-height: 300px; /* iguala visualmente as alturas (aumentado para ícones maiores) */
+  position: relative;
+  overflow: hidden;
+  transition: transform 220ms cubic-bezier(.22,.9,.35,1), box-shadow 220ms ease, filter 220ms ease;
+}
+
+/* efeito de brilho / destaque ao passar o mouse */
+.card:hover, .card1:hover, .card2:hover, .card3:hover,
+.card:focus-within, .card1:focus-within, .card2:focus-within, .card3:focus-within {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 40px rgba(1, 141, 255, 0.438);
+  filter: brightness(1.03);
+}
+
+/* foco acessível (teclado) */
+.card:focus-visible, .card1:focus-visible, .card2:focus-visible, .card3:focus-visible {
+  outline: 3px solid rgba(244, 182, 59, 0.26);
+  outline-offset: 6px;
+}
+
+.icon {
+  height: 150                                                                                                                                                     px; /* ícone maior: aumento aplicado */
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.icon img {
+  height: 100%;
+  width: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+/* estilização do título e parágrafo dentro dos cards */
+.card h3, .card1 h3, .card2 h3, .card3 h3 {
+  margin: 8px 0 8px;
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.card p, .card1 p, .card2 p, .card3 p {
+  color: #6b7280; /* tom de cinza para o parágrafo */
+  font-size: 14px;
+  line-height: 1.5;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .grid3 {
+    grid-template-columns: 1fr;
+  }
+  .icon {
+    height: 80px; /* reduz em telas pequenas */
+    width: 80px;
+  }
+  .card, .card1, .card2, .card3 {
+    padding: 20px;
+    min-height: auto;
+  }
+}

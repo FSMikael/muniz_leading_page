@@ -1,0 +1,81 @@
+<section id="social" class="section social">
+  <!-- Logos moved to diferencial section above the table -->
+  <h3>Quem contratou, recomenda. Veja histórias reais:</h3>
+  <div class="carousel" [class.two-per-view]="itemsPerView === 2">
+    <div class="track"
+         (pointerdown)="onPointerDown($event)"
+         (pointermove)="onPointerMove($event)"
+         (pointerup)="onPointerUp($event)"
+         (pointercancel)="onPointerUp($event)"
+         [style.transform]="'translateX(' + (-currentIndex * (100 / itemsPerView)) + '%)'"><!-- slides -->
+      <div class="slide">
+        <blockquote>
+          <p class="testimonial-text">“Como MEI, achava que plano de saúde era luxo. A Muniz me mostrou que pelo meu CNPJ eu podia ter um plano Bradesco Top pagando menos do que eu pagava num plano básico individual para minha família. A carência foi zero para consultas!”</p>
+          <div class="meta">
+            <div class="author">
+              <img class="avatar" src="assets/avatar1.png" alt="Ricardo S" />
+              <div class="author-info">
+                <div class="name">Ricardo S.</div>
+                <div class="role">Designer</div>
+              </div>
+            </div>
+            <div class="badge badge-mei">MEI</div>
+          </div>
+        </blockquote>
+      </div>
+      <div class="slide">
+        <blockquote>
+          <p class="testimonial-text">“Estávamos perdendo funcionários e com medo dos custos. A consultoria foi impecável: desenharam um plano com coparticipação que coube no orçamento e nossa equipe adorou. O suporte pós-venda resolve tudo, não preciso ligar na operadora.”</p>
+          <div class="meta">
+            <div class="author">
+              <img class="avatar" src="assets/avatar2.png" alt="Mariana L" />
+              <div class="author-info">
+                <div class="name">Mariana L.</div>
+                <div class="role">Diretora da TechSolutions</div>
+              </div>
+            </div>
+            <div class="badge badge-pme">PME</div>
+          </div>
+        </blockquote>
+      </div>
+      <div class="slide">
+        <blockquote>
+          <p class="testimonial-text">“Eu precisava de um plano para mim e minha esposa, mas achava que como MEI seria complicado por causa das regras. A equipe me surpreendeu: o processo foi 100% digital e rápido. Conseguimos um plano SulAmérica com isenção total de carência para consultas e exames, pagando 35% menos que no pessoa física.”</p>
+          <div class="meta">
+            <div class="author">
+              <img class="avatar" src="assets/avatar3.png" alt="Carlos M" />
+              <div class="author-info">
+                <div class="name">Carlos M.</div>
+                <div class="role">Desenvolvedor de Software</div>
+              </div>
+            </div>
+            <div class="badge badge-mei">MEI</div>
+          </div>
+        </blockquote>
+      </div>
+      <div class="slide">
+        <blockquote>
+          <p class="testimonial-text">“O pesadelo da minha empresa era o reajuste anual e o '0800' das operadoras. A Muniz não só negociou nosso último reajuste, baixando para 7% (a média era 15%), como resolve qualquer problema de reembolso ou carteirinha pelo WhatsApp. Eles realmente funcionam como nosso braço direito de RH.”</p>
+          <div class="meta">
+            <div class="author">
+              <img class="avatar" src="assets/avatar4.png" alt="Fernanda T" />
+              <div class="author-info">
+                <div class="name">Fernanda T.</div>
+                <div class="role">Sócia, Agência Criativa</div>
+              </div>
+            </div>
+            <div class="badge badge-pme">PME</div>
+          </div>
+        </blockquote>
+      </div>
+    </div>
+    <div class="controls">
+      <button type="button" class="btn prev" (click)="prev()" aria-label="Anterior">‹</button>
+      <div class="dots">
+        <button *ngFor="let _ of positions; let i = index" type="button" class="dot" [class.active]="i === currentIndex" (click)="goTo(i)" aria-label="Ir para slide {{i+1}}"></button>
+      </div>
+      <button type="button" class="btn next" (click)="next()" aria-label="Próximo">›</button>
+    </div>
+
+  </div>
+</section>

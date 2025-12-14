@@ -1,0 +1,35 @@
+/* Global theme variables */
+:root {
+	--color-primary: #FF6B00;
+	--color-bg-dark: #0B2A7A;
+	--color-bg-dark-2: #143D9A;
+	--color-text: #111;
+}
+
+/* You can add global styles to this file, and also import other style files */
+
+/* enable smooth scrolling for in-page anchors (buttons linking to #form) */
+html {
+	scroll-behavior: smooth;
+}
+
+/* Remove default browser margins that create white borders around the page */
+html, body {
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden; /* prevent horizontal scroll bars */
+	width: 100%;
+	overscroll-behavior-x: none;
+}
+
+/* predictable sizing */
+*, *::before, *::after { box-sizing: border-box; }
+
+/* Syncfusion theme imports (Material) */
+@import '~@syncfusion/ej2-base/styles/material.css';
+@import '~@syncfusion/ej2-buttons/styles/material.css';
+@import '~@syncfusion/ej2-inputs/styles/material.css';
+@import '~@syncfusion/ej2-grids/styles/material.css';
+@import '~@syncfusion/ej2-dropdowns/styles/material.css';
+@import '~@syncfusion/ej2-charts/styles/material.css';
+@import '~@syncfusion/ej2-navigations/styles/material.css';

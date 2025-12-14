@@ -1,0 +1,45 @@
+<section id="form" class="section form-section">
+  <div class="form__content">
+    <div class="form__image" aria-hidden="true">
+      <img src="assets/medica.png" alt="Consultora sorrindo em atendimento humanizado" loading="lazy" />
+    </div>
+    <div class="form__box">
+      <div class="form-inner">
+        <h2>Receba uma Comparação Completa Das Melhores Operadoras (Grátis)</h2>
+        <p class="muted">Não vendemos apenas "um plano". Nossa consultoria analisa seu perfil para encontrar a melhor rede, o menor custo e a menor carência. Análise 100% personalizada e sem compromisso.</p>
+        <form (submit)="onSubmit($event)" novalidate>
+        <label>
+          <span>Seu Nome</span>
+          <input type="text" name="nome" placeholder="Como gostaria de ser chamado?" required />
+        </label>
+        <label>
+          <span>Seu melhor E-mail</span>
+          <input type="email" name="email" placeholder="Para enviarmos a cotação oficial" required />
+        </label>
+        <label class="phone-group">
+          <span>Seu WhatsApp (com DDD)</span>
+          <div class="phone-row">
+            <select name="ddd" class="phone-ddd" aria-label="Código DDI/DDD">
+              <option value="+55">+55</option>
+              <option value="+1">+1</option>
+              <option value="+44">+44</option>
+            </select>
+            <input type="tel" name="whatsapp" class="phone-number" placeholder="(xx) 99999-9999" required />
+          </div>
+        </label>
+        <label>
+          <span>Qual a sua necessidade?</span>
+          <select name="necessidade" required>
+            <option value="" disabled selected>Selecione…</option>
+            <option>Tenho MEI (Para mim/Família)</option>
+            <option>Tenho PME (Para Equipe/Sócios)</option>
+            <option>Ainda não tenho CNPJ</option>
+          </select>
+        </label>
+        <p class="privacy">Seus dados estão protegidos. Respeitamos a LGPD e odiamos spam tanto quanto você.</p>
+        <button type="submit" class="btn btn-primary full">QUERO MINHA CONSULTORIA GRÁTIS</button>
+      </form>
+      </div>
+    </div>
+  </div>
+</section>
