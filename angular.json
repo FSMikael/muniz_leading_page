@@ -20,6 +20,7 @@
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "outputPath": "docs",
+            "baseHref": "/muniz_leading_page/",
             "assets": [
               "src/favicon.ico",
               {

@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:muniz_leading_page": "node dist/muniz_leading_page/server/server.mjs"
+    "serve:ssr:muniz_leading_page": "node dist/muniz_leading_page/server/server.mjs",
+    "deploy": "ng build --configuration production && gh-pages -d docs/browser"
   },
   "prettier": {
     "printWidth": 100,
