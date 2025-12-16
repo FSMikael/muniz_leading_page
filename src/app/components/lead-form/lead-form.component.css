@@ -184,16 +184,24 @@ select {
   }
 
   .form-inner {
-    max-width: 420px;
-    transform: translateX(-15px);
-    padding: 14px;
-    margin: 0 auto;
+    max-width: 92vw;
+    width: calc(100% - 32px);
+    min-height: 440px;
+    transform: translateY(-10px);
+    padding: 24px 20px;
+    margin: 0 auto 18px;
+    border-radius: 14px;
+    box-shadow: 0 14px 30px rgba(0,0,0,0.18);
   }
 
-  .form__box h2 { font-size: 19px; margin-top: -2px; }
+  .form__box h2 { font-size: 20px; margin-top: -2px; font-weight: 800; }
 
   .form__box .btn-primary.full {
     width: 100%;
+    padding: 14px 20px;
+    border-radius: 999px;
+    font-weight: 700;
+    margin-top: 14px;
   }
 }
 

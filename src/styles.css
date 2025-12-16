@@ -22,6 +22,17 @@ html, body {
 	overscroll-behavior-x: none;
 }
 
+/* mobile-friendly default padding for main content */
+@media (max-width: 768px) {
+	.section,
+	main,
+	.container,
+	.content {
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+}
+
 /* predictable sizing */
 *, *::before, *::after { box-sizing: border-box; }
 

@@ -206,7 +206,7 @@
   /* override global mobile .btn width for the hero CTA */
   .hero .btn-primary.btn-pill {
     width: 100%;
-    max-width: 92vw;
+    max-width: 90vw;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -232,7 +232,7 @@
     left: auto;
     top: auto;
     transform: none;
-    max-width: 92vw;
+    max-width: 90vw;
     width: 100%;
     margin: 0 auto;
     padding: 24px 16px 28px;
