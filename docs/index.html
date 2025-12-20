@@ -14,6 +14,18 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-XXXX');
   </script>
+  <!-- SPA GitHub Pages route restore: if redirected from 404 with ?/path, restore URL -->
+  <script>
+    (function(l){
+      if (l.search && l.search.length > 1 && l.search[1] === '/') {
+        var decoded = l.search.slice(1).split('&').map(function(s){
+          return s.replace(/~and~/g, '&');
+        }).join('?');
+        var newUrl = l.pathname.replace(/\/$/, '') + decoded + l.hash;
+        window.history.replaceState(null, null, newUrl);
+      }
+    })(window.location);
+  </script>
 <style>:root{--color-primary:#FF6B00;--color-bg-dark:#0B2A7A;--color-bg-dark-2:#143D9A;--color-text:#111}html{scroll-behavior:smooth}html,body{margin:0;padding:0;overflow-x:hidden;width:100%;overscroll-behavior-x:none}*,*:before,*:after{box-sizing:border-box}</style><link rel="stylesheet" href="styles-FSZNQFER.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles-FSZNQFER.css"></noscript></head>
 <body>
   <!-- Google Tag Manager (noscript) -->
