@@ -13,7 +13,6 @@ interface FaqItem { header: string; content: string }
 export class FaqSection implements AfterViewInit {
   @ViewChildren('panel') panels!: QueryList<ElementRef<HTMLElement>>;
 
-  // animation duration in ms — keep in sync with CSS
   animDuration = 520;
 
   items: FaqItem[] = [
