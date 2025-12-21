@@ -1,3 +1,11 @@
+/* Syncfusion theme imports (Material) */
+@import '@syncfusion/ej2-base/styles/material.css';
+@import '@syncfusion/ej2-buttons/styles/material.css';
+@import '@syncfusion/ej2-inputs/styles/material.css';
+@import '@syncfusion/ej2-grids/styles/material.css';
+@import '@syncfusion/ej2-dropdowns/styles/material.css';
+@import '@syncfusion/ej2-navigations/styles/material.css';
+
 /* Global theme variables */
 :root {
 	--color-primary: #FF6B00;
@@ -35,12 +43,3 @@ html, body {
 
 /* predictable sizing */
 *, *::before, *::after { box-sizing: border-box; }
-
-/* Syncfusion theme imports (Material) */
-@import '~@syncfusion/ej2-base/styles/material.css';
-@import '~@syncfusion/ej2-buttons/styles/material.css';
-@import '~@syncfusion/ej2-inputs/styles/material.css';
-@import '~@syncfusion/ej2-grids/styles/material.css';
-@import '~@syncfusion/ej2-dropdowns/styles/material.css';
-@import '~@syncfusion/ej2-charts/styles/material.css';
-@import '~@syncfusion/ej2-navigations/styles/material.css';
