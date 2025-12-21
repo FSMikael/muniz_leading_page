@@ -1,19 +1,14 @@
 .faq {
   background: #cfe9ff;
-  /* light blue background */
   padding: 36px 18px;
-  /* base padding */
   border-radius: 0;
-  /* full-bleed (no rounded corners) */
   position: relative;
   margin-top: 48px;
-  /* push the blue background lower so CTA remains visible */
-  /* make the FAQ background span the full viewport width */
+ 
   width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
   overflow-x: clip;
-  /* avoid page-level horizontal scroll */
 }
 
 .faq h2 {
@@ -122,7 +117,6 @@
     font-size: 18px;
   }
 
-  /* cap width and center buttons/panels so they don't touch the right edge */
   .faq .faq-header,
   .faq .faq-panel {
     width: 100%;
