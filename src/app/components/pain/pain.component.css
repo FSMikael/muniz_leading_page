@@ -54,7 +54,7 @@
 }
 
 .icon {
-  height: 150                                                                                                                                                     px; /* ícone maior: aumento aplicado */
+  height: 150px; /* ícone maior: aumento aplicado */
   width: 250px;
   display: flex;
   align-items: center;
